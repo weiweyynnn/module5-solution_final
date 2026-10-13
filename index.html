@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#61122f">
+  <meta name="description" content="David Chu's China Bistro — explore the menu and discover a random menu category from Specials.">
+  <title>David Chu's China Bistro | Module 5</title>
+  <link rel="stylesheet" href="vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700|Lora:400,700" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav id="header-nav" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="pull-left visible-md visible-lg brand-mark" href="index.html" aria-label="Return to homepage"><span class="brand-seal">DC</span></a>
+          <div class="navbar-brand">
+            <a href="index.html"><h1>David Chu's China Bistro</h1></a>
+            <p><span class="kosher-star">✦</span><span>Kosher Certified</span></p>
+          </div>
+          <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="collapsable-nav" class="collapse navbar-collapse">
+          <ul id="nav-list" class="nav navbar-nav navbar-right">
+            <li id="navHomeButton" class="visible-xs active"><a href="index.html"><span class="glyphicon glyphicon-home"></span><span class="nav-label">Home</span></a></li>
+            <li id="navMenuButton"><a href="#" onclick="$dc.loadMenuCategories(); return false;"><span class="glyphicon glyphicon-cutlery"></span><span class="nav-label">Menu</span></a></li>
+            <li><a href="#story" onclick="return $dc.showStory(event);"><span class="glyphicon glyphicon-info-sign"></span><span class="nav-label">About</span></a></li>
+            <li><a href="#awards" onclick="return $dc.showAwards(event);"><span class="glyphicon glyphicon-certificate"></span><span class="nav-label">Awards</span></a></li>
+            <li id="phone" class="hidden-xs"><a href="tel:410-602-5008"><span>410-602-5008</span></a><div>* We Deliver</div></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div id="call-btn" class="visible-xs"><a class="btn" href="tel:410-602-5008"><span class="glyphicon glyphicon-earphone"></span> 410-602-5008</a></div>
+  <div id="xs-deliver" class="text-center visible-xs">* We Deliver</div>
+
+  <main id="main-content" class="container" aria-live="polite">
+    <div class="loader" role="status"><span class="spinner"></span> Preparing your table…</div>
+  </main>
+
+  <footer class="panel-footer">
+    <div class="container">
+      <div class="row">
+        <section id="hours" class="col-sm-4"><span>Hours</span><p>Sun–Thurs: 11:15am – 10:00pm<br>Fri: 11:15am – 2:30pm<br>Saturday: Closed</p><hr class="visible-xs"></section>
+        <section id="address" class="col-sm-4"><span>Find us</span><p>7105 Reisterstown Road<br>Baltimore, MD 21215</p><p class="footer-fine">* Delivery area within 3–4 miles, minimum order $20 plus $3 delivery charge.</p><hr class="visible-xs"></section>
+        <section id="testimonials" class="col-sm-4"><span>Our guests say</span><p>“The best Chinese restaurant I've been to!”</p><p>“Amazing food! Great service! Couldn't ask for more!”</p></section>
+      </div>
+      <div class="footer-bottom">© David Chu's China Bistro · Coursera Module 5 educational project</div>
+    </div>
+  </footer>
+  <script src="vendor/jquery.min.js"></script>
+  <script src="vendor/bootstrap.min.js"></script>
+  <script src="js/data-fallback.js"></script>
+  <script src="js/ajax-utils.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
